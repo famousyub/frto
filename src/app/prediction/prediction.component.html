@@ -1,0 +1,38 @@
+
+<div class="background-image"></div>
+    <div class="run">
+
+<div class="container">
+    <h2>Predict Taux Retard</h2>
+   
+    <div class="form-group">
+      <label for="frais_mission">Frais Mission:</label>
+      <input type="text" class="form-control" id="frais_mission" [(ngModel)]="input.frais_mission" name="frais_mission">
+    </div>
+    <div class="form-group">
+      <label for="frais_transport">Frais Transport:</label>
+      <input type="number" class="form-control" id="frais_transport" [(ngModel)]="input.frais_transport" name="frais_transport">
+    </div>
+  
+    
+    <div class="form-group">
+      <label for="Duree_prev">Duree prev:</label>
+      <input type="number" class="form-control" id="Duree_prev" [(ngModel)]="input.Duree_prev" name="Duree_prev">
+    </div>
+    <div class="form-group">
+      <label for="Duree_reelle">Duree reelle:</label>
+      <input type="number" class="form-control" id="Duree_reelle" [(ngModel)]="input.Duree_reelle" name="Duree_reelle">
+    </div>
+    <div class="form-group">
+      <label for="ecart_delai">Ecart Delai:</label>
+      <input type="number" class="form-control" id="ecart_delai" [(ngModel)]="input.ecart_delai" name="ecart_delai">
+    </div>
+    <button class="btn btn-primary" (click)="predictTauxRetard()">Predict</button>
+    <div *ngIf="prediction !== null" class="result">
+      <h4>Prediction: {{ prediction.response }}</h4>
+    </div>
+  </div>
+
+  </div>
+  
+  
